@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg-light">
+   
+<section id="setting" >
+    <div class="container pt-5 ">
+        <div class="row justify-content-center align-items-center">
+        <div class=" bg-white w-50 shadow-lg px-0 ">
+             <h1 class="text-center bg-light  text-secondary py-5 px-0 border-bottom">Setting Your Quiz</h1>
+                <div class="p-4">
+                    <div class="form-group">
+                      <label for="category" class="text-secondary my-2">Category</label>
+                      <select id="category" class="form-control" name="category">
+                        <option value="9">General Knowledge</option>
+                        <option value="27">Animals</option>
+                        <option value="15">Video Games</option>
+                        <option value="23">History</option>
+                        <option value="21">Sports</option>
+                        <option value="18">Science: Computers</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="difficulty" class="text-secondary my-2 diff"> Difficulty</label>
+                       
+                       <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Difficulty" id="easy" value="easy">
+                            Easy</label>
+                       </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="Difficulty" id="medium" value="medium">
+                            Medium</label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="Difficulty" id="hard" value="hard">
+                        Hard</label>
+                      </div>
+                        </div>
+                    
+            <div class="form-group py-2 ">
+               <input class="form-control" type="number" placeholder="Number Of questions" id="Number" required>
+            </div>
+
+      <button id="startBtn" class="btn py-2 px-4 bg-secondary rounded-pill text-white my-4 w-100" >Start</button>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section id="quiz" class="d-none" >
+    <div class="container pt-5 ">
+        <div class="row justify-content-center align-items-center">
+        <div class=" bg-white w-50 shadow-lg px-0 ">
+          <div class="bg-light  border-bottom">
+            <h1 class="text-center  text-secondary py-4 px-0 "> Quiz</h1>
+           <div class="d-flex justify-content-between pb-3 mx-5">
+            <div>
+              <span id="inCorrect" class="btn btn-danger d-none" >InCorrect</span >
+             <span id="Correct" class="btn btn-success d-none">Correct</span>
+             </div>
+          
+            <div class="btn btn-warning">
+              <span id="current">0</span>
+              <span>of</span>
+              <span id="totalAmount">5</span>
+              <span>Question</span>
+
+             </div>
+            </div>
+           </div>
+               <div class="p-4">
+                   <div class="form-group">
+                    <h5 class="d-inline">Q:</h5>
+                    <h5 id="question" class="d-inline">Lorem, ipsum dolor.</h5>
+
+                    <div id="rowAnswer">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio"class="form-check-input" name="answer"id="q1"value="value"/>
+                          Lorem ipsum dolor sit amet.
+                        </label>
+                      </div>
+                    </div>
+                    <div class="alert alert-danger mt-5 d-none">Please Choose Your Answer</div>
+                    <button class="btn  py-2 px-4 bg-secondary rounded-pill text-white my-4"id="next">Submit</button>
+                      </div>
+                   </div>
+          </div>
+            
+                  
+            
+    </div>
+    </div>
+</div>
+</section>
+
+
+<section id="finish" class="d-none pt-5">
+  <div
+    class="bg-white w-50 m-auto shadow-lg rounded overflow-auto text-center "
+  >
+    <h1 class="text-secondary py-5 bg-light border-bottom">fininsh</h1>
+    <div class="p-4">
+      <h5 class="text-secondary">score</h5>
+      <h4 class="text-secondary" id="score"></h4>
+      <button
+        class="btn float-right py-2 px-4 bg-spec rounded-pill text-white my-4"
+        id="tryBtn"
+      >
+        Try Again?
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/home.js"></script>
+</body>
+</html>

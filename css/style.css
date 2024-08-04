@@ -1,0 +1,149 @@
+/*https://alfaroukroute.github.io/Mealify/index.html*/
+/*^============> Variables <============*/
+:root {
+  /* ? ######## Colors */
+  --color-default: #212529;
+  --primary-hue: 0;
+  --primary-saturation: 84%;
+  --primary-lightness: 44%;
+  --color-primary: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness)
+  );
+  --color-secondary: #37373f;
+  --color-tertiary: #7f7f90;
+  --light-hue: 0;
+  --light-saturation: 0%;
+  --light-lightness: 100%;
+  --color-light: hsl(
+    var(--light-hue),
+    var(--light-saturation),
+    var(--light-lightness)
+  );
+  --color-light-grey: #eee;
+  /* ? ######## Fonts */
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  /* ? ######## Animation options */
+  --animation-duration: 400ms;
+}
+/* ? ######## Navbar */
+nav h1 a::after{
+  content: ".";
+  color: #CE1212;
+}
+nav ul li  {
+  position: relative;
+  transition: width var(--animation-duration);
+}
+nav ul li a{
+  color: var(--color-tertiary) !important;
+}
+nav ul li ::before{
+  content: " ";
+  width: 0%;
+  height: 0.1rem;
+  position: absolute;
+  left: 20%;
+  bottom: -3px;
+  background-color: #CE1212;
+}
+nav ul li:hover ::before{
+ width: 70%;
+}
+nav ul li a:hover {
+  color: #000 !important;
+}
+body:has(.home:target)nav.home-link{
+  background-color: red !important;
+}
+ body{
+    font-family: var(--font-default);
+ }
+ h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+.font30{
+    font-size: 1.875rem;
+}
+.font17{
+    font-size: 1.0625rem;
+}
+.section-bg{
+  background-color: #EEEEEE;
+}
+h2{
+  font-family: var(--font-primary);
+  font-size: 4.0625rem;
+  font-weight: bold;
+}
+p{
+  color: #4f4f5A;
+}
+.btn-main{
+  background-color: #CE1212;
+  padding: .625rem 1.5625rem;
+  border: 0.125rem solid  ;
+}
+.btn:hover{
+  background-color: transparent;
+  color: transparent;
+}
+img{
+  filter: drop-shadow(10px 10px #ffffff);
+}
+.icon{
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right:1rem ;
+
+  position: relative;
+}
+.icon::before{
+  content: " ";
+  width: 0.5rem;
+  transform: translate(-50%, -50%);
+  height:100%;
+ border-radius: 50%;
+  background-color: #4f4f5A;
+  position: absolute;
+  left:0%;
+}
+
+/*.btn {
+  --background-color: transparent;
+  --color: var(--color-light);
+  --padding: 0.3125rem 0.75rem;
+  --border-width: 0.125rem;
+  --border-color: transparent;
+  --border-radius: 1rem;
+  --hover-bg-color: transparent;
+  --hover-color: transparent;
+  --font-size: 1rem;
+
+  padding: var(--padding);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  color: var(--color);
+  font-size: var(--font-size);
+  cursor: pointer;
+  transition: background-color var(--animation-duration),
+    color var(--animation-duration);
+}
+
+.btn:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}*/
